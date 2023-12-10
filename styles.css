@@ -1,0 +1,919 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  position: relative;
+  height: 100vh;
+}
+
+/* Navigation css */
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(209, 206, 206);
+  padding: 10px;
+}
+
+.left-tabs,
+.right-tabs {
+  display: flex;
+  list-style-type: none;
+  gap: 60px;
+  padding: 10px;
+  margin: 0 80px;
+}
+
+.left-tabs a,
+.right-tabs a {
+  text-decoration: none;
+  border: none;
+}
+
+.tab:hover {
+  color: rgb(205, 69, 92);
+}
+
+.title {
+  display: flex;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  font-family: "Edu TAS Beginner", sans-serif;
+  font-size: 18px;
+}
+
+.phrase {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 10px;
+}
+
+.img-banner {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  animation: focusIn 1.5s ease-out;
+  border-radius: 20px;
+}
+
+@keyframes focusIn {
+  0% {
+    width: 150%;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.tab {
+  border: none;
+  gap: 20px;
+  color: black;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-family: "Raleway", serif;
+  cursor: pointer;
+}
+
+/* Hero section css */
+
+.container {
+  position: absolute;
+  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.3);
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.middle-content {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.title {
+  font-family: "Edu TAS Beginner", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  justify-content: center;
+}
+
+.sub-title {
+  color: rgb(205, 69, 92);
+  font-size: 15px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  padding: 15px 10px;
+}
+
+.intro {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: 1.2;
+}
+
+/* About css */
+
+.about {
+  display: flex;
+  align-items: center;
+}
+
+.img-shop {
+  padding: 10px;
+  width: 40%;
+  margin-top: 70px;
+  margin-left: 70px;
+  border-radius: 20px;
+}
+
+.shop-desc {
+  margin-top: 60px;
+  padding: 0 50px;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 1.5;
+}
+
+/* Gallary css */
+
+.product-header {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.product-header::before,
+.product-header::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-top: 1px solid #3f3f3f;
+  width: 220px;
+  margin-top: 20px;
+}
+
+.product-header::before {
+  left: 300px;
+}
+
+.product-header::after {
+  right: 300px;
+}
+
+.row {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-around;
+}
+
+.gallery-container {
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-container:hover {
+  transform: scale(1.1);
+}
+
+.product-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Raleway", serif;
+  font-weight: 400;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+  z-index: 1;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.view-all {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 65px;
+  margin-bottom: 40px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #888686;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-all:hover {
+  background-color: #4caf50;
+}
+
+/* Advert css */
+
+.advert {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.advert-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("assests/footer.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.7;
+}
+
+.sale-header {
+  font-family: "Dancing Script", serif;
+  font-size: 100px;
+  font-weight: bold;
+  color: rgb(218, 31, 62);
+}
+
+.overlay-text {
+  position: absolute;
+  top: 20%;
+  left: 60%;
+  color: #fff;
+  text-align: center;
+}
+
+.overlay-subtext {
+  position: absolute;
+  width: auto;
+  left: 100px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(145, 5, 29);
+  font-family: "Roboto", sans-serif;
+}
+
+/* Footer css */
+
+.keep-intouch {
+  padding: 20px 30px;
+  align-items: center;
+}
+
+.subscribe-section {
+  text-align: center;
+  padding: 40px;
+  background-color: #f4f4f4;
+}
+
+.subscribe-section h2 {
+  font-size: 35px;
+  color: #333;
+}
+
+.subscribe-section p {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  outline: none;
+}
+
+.subscribe-button {
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subscribe-button:hover {
+  background-color: #888686;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.footer-title {
+  margin: 0;
+  font-family: "Edu TAS Beginner", sans-serif;
+}
+
+.footer-nav span {
+  flex: 1;
+  text-align: center;
+}
+
+.footer {
+  background-color: #5a5858;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.footer-column {
+  flex: 1;
+  margin-right: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.address {
+  font-size: 18px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
+.copyright {
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+  background-color: white;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+/* media queries css */
+
+/* LAPTOP */
+
+@media screen and (max-width: 1024px) {
+  .main-container {
+    position: relative;
+    height: 100vh;
+  }
+
+  .nav {
+    justify-content: center;
+    margin: 0px 0px;
+  }
+
+  .left-tabs,
+  .right-tabs {
+    gap: 15px;
+    padding: 10px 10px;
+    margin: 0px 0px;
+  }
+
+  .tab {
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+  }
+
+  .img-banner {
+    height: 300px;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .container {
+    top: 40%;
+    justify-content: none;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .intro {
+    font-size: 13px;
+    line-height: 1.2;
+    letter-spacing: 1.2;
+  }
+
+  .about {
+    display: flex;
+    align-items: center;
+  }
+
+  .img-shop {
+    padding: 5px;
+    margin-top: 60px;
+    margin-left: 80px;
+    width: 30%;
+  }
+
+  .shop-desc {
+    margin-top: 50px;
+    margin-right: 40px;
+    overflow-wrap: normal;
+    font-size: 14px;
+    padding: 0 30px;
+  }
+
+  .logo {
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+  }
+
+  .name {
+    font-size: 15px;
+  }
+
+  .product-header {
+    font-size: 18px;
+  }
+
+  .product-header::before,
+  .product-header::after {
+    width: 200px;
+    margin-top: 10px;
+  }
+
+  .product-header::before {
+    left: 180px;
+  }
+
+  .product-header::after {
+    right: 180px;
+  }
+
+  .row {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    justify-content: none;
+    gap: 30px;
+  }
+
+  .advert {
+    height: 280px;
+  }
+
+  .gallery-container {
+    justify-content: center;
+    width: 200px;
+    height: 250px;
+  }
+
+  .product-title {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .sale-header {
+    font-size: 60px;
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 20%;
+    left: 65%;
+  }
+
+  .overlay-subtext {
+    left: 80px;
+    font-size: 14px;
+  }
+}
+
+/* TABLET */
+
+@media screen and (max-width: 768px) {
+  .nav {
+    justify-content: center;
+    padding: 10px;
+    margin: 0px 0px;
+  }
+
+  .left-tabs,
+  .right-tabs {
+    padding: 10px 10px;
+    gap: 0px;
+  }
+
+  .logo {
+    width: 25px;
+    height: 25px;
+    padding: 3px;
+  }
+
+  .name {
+    font-size: 12px;
+  }
+
+  .phrase {
+    font-size: 9px;
+  }
+
+  .tab {
+    font-size: 12px;
+    gap: 0px;
+  }
+
+  .img-banner {
+    height: 250px;
+  }
+
+  .container {
+    width: 60%;
+    top: 40%;
+    left: 53%;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .sub-title {
+    font-size: 11px;
+    padding: 10px 0;
+  }
+
+  .intro {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .img-shop {
+    padding: 0px;
+    width: 40%;
+    height: 250px;
+    margin-top: 50px;
+    margin-left: 90px;
+    border-radius: 20px;
+  }
+
+  .shop-desc {
+    width: 550px;
+    margin-top: 65px;
+    padding: 0 40px;
+    font-size: 12px;
+
+    line-height: 1.6;
+  }
+
+  .product-header {
+    font-size: 18px;
+  }
+
+  .product-header::before,
+  .product-header::after {
+    width: 80px;
+    margin-bottom: 20px;
+  }
+
+  .row {
+    margin-top: 30px;
+    justify-content: none;
+    gap: 20px;
+  }
+
+  .gallery-container {
+    width: 150px;
+    height: 180px;
+    overflow: hidden;
+  }
+
+  .product-img {
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .product-title {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .advert {
+    height: 200px;
+  }
+
+  .sale-header {
+    font-size: 50px;
+  }
+
+  .overlay-text {
+    left: 65%;
+  }
+
+  .overlay-subtext {
+    left: 19px;
+    font-size: 13px;
+  }
+
+  .keep-intouch {
+    padding: 20px 30px;
+  }
+
+  .subscribe-section h2 {
+    font-size: 18px;
+  }
+
+  .subscribe-section p {
+    font-size: 12px;
+  }
+
+  label {
+    font-size: 18px;
+    margin-right: 12px;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .subscribe-button {
+    font-size: 14px;
+  }
+
+  .footer-nav {
+    width: auto;
+  }
+
+  .footer-title {
+    font-size: 14px;
+  }
+
+  .address {
+    font-size: 14px;
+  }
+
+  ul li {
+    font-size: 12px;
+  }
+
+  .time {
+    font-size: 12px;
+  }
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 320px) {
+  .nav {
+    width: fit-content;
+    background-color: white;
+  }
+
+  .left-tabs,
+  .right-tabs {
+    gap: 0px;
+    padding: 0px;
+  }
+
+  .tab {
+    border: none;
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+
+  .container {
+    position: relative;
+    box-shadow: none;
+    top: 40%;
+    left: 65%;
+    width: 100%;
+  }
+
+  .middle-content {
+    margin: 0 10px;
+    padding: 0px 0px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .name {
+    display: none;
+  }
+
+  .phrase {
+    display: none;
+  }
+
+  .middle-content {
+    flex: 1;
+    margin: 0 20px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .sub-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .intro {
+    font-size: 17px;
+    margin-right: 10px;
+  }
+
+  .img-banner {
+    width: 100%;
+    margin-left: 10%;
+    height: auto;
+    animation: none;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-shop {
+    padding: 0px 0px;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    margin-left: 16%;
+    border-radius: 15px;
+  }
+
+  .shop-desc {
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 35%;
+    padding: 0px 0px;
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .product-header {
+    font-size: 20px;
+    margin-top: 40px;
+    margin-left: 30%;
+  }
+
+  .product-header::before,
+  .product-header::after {
+    display: none;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    justify-content: center;
+  }
+
+  .gallery-container {
+    width: 250px;
+    height: 200px;
+    margin-top: 20px;
+    left: 10%;
+  }
+
+  .product-title {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .view-all {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    font-size: 14;
+    margin-left: 15%;
+  }
+
+  .advert-container {
+    left: 25%;
+  }
+
+  .sale-header {
+    font-size: 30px;
+  }
+
+  .overlay-text {
+    top: 30%;
+    left: 15%;
+    text-align: center;
+  }
+
+  .subscribe-section {
+    margin: 10px 10px;
+    background-color: white;
+    padding: 10px;
+    margin-left: 25%;
+  }
+
+  .subscribe-section h2 {
+    font-size: 18px;
+  }
+
+  .subscribe-section p {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    font-size: 15px;
+    margin: 5px 10px;
+  }
+
+  input {
+    width: 80%;
+    padding: 10px 5px;
+    font-size: 12px;
+    margin: 10px 10px;
+    text-align: center;
+  }
+
+  .subscribe-button {
+    padding: 10px 10px;
+    font-size: 18px;
+    margin: 15px 0px;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .copyright {
+    font-size: 12px;
+    margin-left: 18%;
+  }
+}
